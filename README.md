@@ -1,4 +1,35 @@
-# inwriting-attempt-2
+# Banter Plugin Case Study
+
+## How to Implement 
+
+‘Plugin’ would work on any website by just importing my code as a Node module and loading the chatbot component/plugin like so:
+
+```
+<BanterChat
+      v-bind:brand_id="2" // Brand’s ID (internal to Banter, e.g. Prada is brand_id 1, GAP is brand_id 2)
+      v-bind:product_id="1" // ID of a specific product (required to fetch reviews for that specific product) — could allow product_id of -1 to be ‘all reviews’ of the companies products
+      v-bind:bgColor="'white'" // customizable background color of the plugin
+      v-bind:messageBgColor="'red'" // customizable background color of the ‘message’ (e.g. 50+ people have posted…)
+      v-bind:messageBgColorHover="'red'"  // customizable hover color of the message
+      v-bind:chatWindowMessageColor="'gray'" // customizable background color of user message containers
+/>
+```
+
+## Design Decisions 
+Chose to include being able to upload simple messages (no content validation/monitoring) as a user to a server just to show that I have the ability to (since it will be important for the role), and to demonstrate some capabilities of custom styling since every business will want their plugin to be in accordance with their existing branding guidelines. Otherwise the implementation is pretty similar to what was in the case study docs, with the following features:
+- Clicking the message launches an animation and displays the chatbot plugin
+- Clicking outside of the message (on the rest of the page) removes the chatbot plugin
+
+## Integrating with Shopify
+
+To integrate the interface with Shopify as a plugin, the workflow would look something like:
+1. Setting up custom theme app extension 
+2. Port code over -- quick 2 minute solution would be to just load this component in the Shopify extension
+3. Caveat is it would take longer to integrate specific products (you’d have to write some code that connects between your Shopify CDN/Database where your orders, product IDs are stored and this case studies’ solution) but as a business you’d have to connect your product IDs with the Banter database anyways 
+
+
+
+
 
 ## Build Setup
 
