@@ -6,7 +6,7 @@
         </div>
         <transition name="fade">
             <div class="iframe_wrapper" v-if="chatToggled">
-                <BanterChatWindow v-bind:bgColor="bgColor"  v-bind:productURL="'banter?brand_id=' + brand_id + '&product_id=' + product_id + '&chatWindowBgColor=' + chatWindowBgColor + '&bgColor=' + bgColor + '&chatWindowMessageColor=' + chatWindowBgColor" v-bind:clientHeight="clientHeight" v-bind:clientWidth="clientWidth" />
+                <BanterChatWindow v-bind:bgColor="bgColor"  v-bind:productURL="'https://main.d2t6w6lnr5vdz5.amplifyapp.com/banter/?brand_id=' + brand_id + '&product_id=' + product_id + '&chatWindowBgColor=' + chatWindowBgColor + '&bgColor=' + bgColor + '&chatWindowMessageColor=' + chatWindowBgColor" v-bind:clientHeight="clientHeight" v-bind:clientWidth="clientWidth" />
             </div>
         </transition>
     </div>
