@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Proxima Nova Medium";
+  src: local("Proxima Nova Medium"),
+    url(~/assets/ProximaNovaMedium.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  src: local("Proxima Nova Extra Condensed"),
+    url(~/assets/ProximaNovaExtraCondensed.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Menlo";
+  src: local("Menlo"), url(~/assets/Menlo.ttf) format("truetype");
+  font-display: swap;
+}

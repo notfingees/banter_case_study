@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Proxima Nova Medium";
+  src: local("Proxima Nova Medium"),
+    url(~/assets/ProximaNovaMedium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  src: local("Proxima Nova Extra Condensed"),
+    url(~/assets/ProximaNovaExtraCondensed.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Menlo";
+  src: local("Menlo"), url(~/assets/Menlo.ttf) format("truetype");
+}
+
+/* Variables */
+
+$red: red;
+
+$bg-color: green;
+
+$message-bg-color: lime;
+
+$message-bg-color-hover: limegreen;
+
+$chat-window-bg-color: green;
+
+$chat-window-message-color: yellow;
+
+:export {
+  redColor: $red;
+  bgColor: $bg-color;
+  messageBgColor: $message-bg-color;
+  messageBgColorHover: $message-bg-color-hover;
+  chatWindowBgColor: $chat-window-bg-color;
+  chatWindowMessageColor: $chat-window-message-color;
+}
+
+p {
+  font-family: Helvetica;
+}
