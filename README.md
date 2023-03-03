@@ -18,7 +18,10 @@
 ## Design Decisions 
 Chose to include being able to upload simple messages (no content validation/monitoring) as a user to a server just to show that I have the ability to (since it will be important for the role), and to demonstrate some capabilities of custom styling since every business will want their plugin to be in accordance with their existing branding guidelines. Otherwise the implementation is pretty similar to what was in the case study docs, with the following features:
 - Clicking the message launches an animation and displays the chatbot plugin
+- Chatbot plugin shows messages
 - Clicking outside of the message (on the rest of the page) removes the chatbot plugin
+
+View the functionality at the home page, or with a Depop 'background' at /image_storefront
 
 ## Integrating with Shopify
 
