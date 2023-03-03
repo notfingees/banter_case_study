@@ -28,11 +28,11 @@ export default {
     props: {
         brand_id: null,
         product_id: null,
-        bgColor: null,
-        messageBgColor: null,
+        bgColor: 'gray',
+        messageBgColor: 'gray',
         messageBgColorHover: null,
-        chatWindowBgColor: null,
-        chatWindowMessageColor: null,
+        chatWindowBgColor: 'gray',
+        chatWindowMessageColor: 'lightgray',
     },
     components: {
         BanterChatWindow,
