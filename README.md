@@ -2,21 +2,28 @@
 
 ## How to Implement 
 
-‘Plugin’ would work on any website by just importing my code as a Node module and loading the chatbot component/plugin like so:
+‘Plugin’ would work on any website by importing my code as a Node/NPM module and loading the chatbot component/plugin like so (see source code examples at pages/index.Vue and pages/image_storefront.Vue):
 
 ```
 <BanterChat
       v-bind:brand_id="2" // Brand’s ID (internal to Banter, e.g. Prada is brand_id 1, GAP is brand_id 2)
+      
       v-bind:product_id="1" // ID of a specific product (required to fetch reviews for that specific product) — could allow product_id of -1 to be ‘all reviews’ of the companies products
+      
       v-bind:bgColor="'white'" // customizable background color of the plugin
-      v-bind:messageBgColor="'red'" // customizable background color of the ‘message’ (e.g. 50+ people have posted…)
+      
+      v-bind:messageBgColor="'red'" // customizable background color of the ‘message’ (e.g. "50+ people have posted…")
+      
       v-bind:messageBgColorHover="'red'"  // customizable hover color of the message
+      
       v-bind:chatWindowMessageColor="'gray'" // customizable background color of user message containers
 />
 ```
 
+The plugin, as it stands now, allows for different 'chatbot' pages for each brand/company product (differentiated through the brand_id prop and product_idp rop), as well as basic customization of plugin aesthetics, and uploading of user-generated messages.
+
 ## Design Decisions 
-Chose to include being able to upload simple messages (no content validation/monitoring) as a user to a server just to show that I have the ability to (since it will be important for the role), and to demonstrate some capabilities of custom styling since every business will want their plugin to be in accordance with their existing branding guidelines. Otherwise the implementation is pretty similar to what was in the case study docs, with the following features:
+I chose to implement the feature of allowing users to upload simple messages (no content validation/monitoring) to a server just to show that I have the ability to (since it will be important for the role). I also chose to demonstrate some capabilities of custom styling to show my grasp of more complex CSS/front-end development, and also because most businesses will want their plugin to be in accordance with their existing branding guidelines. Otherwise the implementation follows what was in the case study docs, with the following features:
 - Clicking the message launches an animation and displays the chatbot plugin
 - Chatbot plugin shows messages
 - Clicking outside of the message (on the rest of the page) removes the chatbot plugin
@@ -29,9 +36,6 @@ To integrate the interface with Shopify as a plugin, the workflow would look som
 1. Setting up custom theme app extension 
 2. Port code over -- quick 2 minute solution would be to just load this component in the Shopify extension
 3. Caveat is it would take longer to integrate specific products (you’d have to write some code that connects between your Shopify CDN/Database where your orders, product IDs are stored and this case studies’ solution) but as a business you’d have to connect your product IDs with the Banter database anyways 
-
-
-
 
 
 ## Build Setup

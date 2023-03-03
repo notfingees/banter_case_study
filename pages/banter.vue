@@ -177,7 +177,7 @@ p { color: $red;}
   // keeping it at the bottom
   position: fixed;
   background-color: $bg-color;
-  width: 100%;
+  width: 90%;
   bottom: 0;
   padding-left: 1rem;
   padding-right: 1rem;
